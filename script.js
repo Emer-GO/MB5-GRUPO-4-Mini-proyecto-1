@@ -14,7 +14,6 @@ form.addEventListener('submit', function(e) {
     const edad = parseInt(edadInput.value);
     const carrera = carreraInput.value;
 
-    // Validación de edad
     if (edad <= 16) {
         errorMsg.textContent = 'La edad debe ser mayor a 16 años.';
         return;
@@ -22,16 +21,12 @@ form.addEventListener('submit', function(e) {
         errorMsg.textContent = '';
     }
 
-    // Agregar a lista
     estudiantes.push({ nombre, edad, carrera });
 
-    // Ordenar por nombre
     estudiantes.sort((a, b) => a.nombre.localeCompare(b.nombre));
 
-    // Limpiar formulario
     form.reset();
 
-    // Mostrar tabla
     mostrarTabla();
 });
 
