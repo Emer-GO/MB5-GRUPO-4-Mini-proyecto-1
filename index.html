@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro Estudiantil - Grupo 5</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h2>Formulario de Registro Estudiantil</h2>
+
+<form id="registroForm">
+    <label>Nombre:
+        <input type="text" id="nombre" required>
+    </label>
+
+    <label>Edad:
+        <input type="number" id="edad" required>
+    </label>
+
+    <label>Carrera:
+        <select id="carrera" required>
+            <option value="">Seleccione</option>
+            <option>Ingeniería</option>
+            <option>Administración</option>
+            <option>Diseño</option>
+            <option>Medicina</option>
+        </select>
+    </label>
+
+    <p class="error" id="errorMsg"></p>
+
+    <button type="submit">Registrar</button>
+</form>
+
+<h3>Filtrar por Carrera</h3>
+<select id="filtroCarrera">
+    <option value="">Todas</option>
+    <option>Ingeniería</option>
+    <option>Administración</option>
+    <option>Diseño</option>
+    <option>Medicina</option>
+</select>
+
+<table id="tablaEstudiantes">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Carrera</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>
